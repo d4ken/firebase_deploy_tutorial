@@ -20,6 +20,13 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[300],
@@ -82,6 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: TextField(
+                            obscureText: true,
                             controller: _passwordController,
                             decoration: InputDecoration(
                               hintText: 'Password',
@@ -97,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25.0),
                     child: GestureDetector(
-                      onTap: signin,
+                      onTap: signIn,
                       child: Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
