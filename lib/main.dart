@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_deploy_tutorial/firebase_options.dart';
-import 'package:firebase_deploy_tutorial/main_page.dart';
+import 'package:firebase_deploy_tutorial/auth/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
